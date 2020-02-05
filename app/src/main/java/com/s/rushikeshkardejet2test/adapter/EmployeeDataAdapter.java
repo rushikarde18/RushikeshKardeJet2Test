@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.s.rushikeshkardejet2test.R;
 import com.s.rushikeshkardejet2test.databinding.EmployeeListItemBinding;
 import com.s.rushikeshkardejet2test.model.Result;
+import com.s.rushikeshkardejet2test.ui.EmployeeDetailsActivity;
 import com.s.rushikeshkardejet2test.utils.Constants;
 
 import java.util.ArrayList;
@@ -43,7 +44,17 @@ public class EmployeeDataAdapter extends RecyclerView.Adapter<EmployeeDataAdapte
             @Override
             public void onClick(View v) {
 
+                Toast.makeText(context, "" + employees.get(i).getName().getFirst(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(context, EmployeeDetailsActivity.class);
+                intent.putExtra(Constants.KEY_FIRST_NAME, employees.get(i).getName().getFirst());
+                intent.putExtra(Constants.KEY_LAST_NAME, employees.get(i).getName().getLast());
+                intent.putExtra(Constants.KEY_IMAGE_URL, employees.get(i).getPicture().getLarge());
+                intent.putExtra(Constants.KEY_DATE_OF_BIRTH, employees.get(i).getDob().getDate());
+                intent.putExtra(Constants.KEY_LOCATION, employees.get(i).getLocation().getCity());
+                intent.putExtra(Constants.KEY_EMAIL, employees.get(i).getEmail());
+                intent.putExtra(Constants.KEY_PHONE_NUMBER, employees.get(i).getPhone());
 
+                context.startActivity(intent);
 
             }
         });
