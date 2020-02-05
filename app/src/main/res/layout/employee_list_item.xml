@@ -58,10 +58,27 @@
             tools:text="Morris"/>
 
         <TextView
-            android:id="@+id/tvEmail"
+            android:id="@+id/tvGender"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvFullName"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:padding="4dp"
+            android:text="@{`Gender - ` + employee.gender}"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            bind:layout_constraintEnd_toEndOf="parent"
+            bind:layout_constraintStart_toEndOf="@+id/ivPic"
+            bind:layout_constraintTop_toBottomOf="@+id/tvFullName"
+            tools:text="morris@gmail.com"/>
+
+        <TextView
+            android:id="@+id/tvEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvGender"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
@@ -71,7 +88,7 @@
             android:textSize="16sp"
             bind:layout_constraintEnd_toEndOf="parent"
             bind:layout_constraintStart_toEndOf="@+id/ivPic"
-            bind:layout_constraintTop_toBottomOf="@+id/tvFullName"
+            bind:layout_constraintTop_toBottomOf="@+id/tvGender"
             tools:text="morris@gmail.com"/>
 
       </androidx.constraintlayout.widget.ConstraintLayout>
