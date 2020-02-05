@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import com.rushikeshkardetest.R;
+import com.s.rushikeshkardejet2test.R;
 
 import java.io.Serializable;
 
